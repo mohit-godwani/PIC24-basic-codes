@@ -1,0 +1,27 @@
+#include <xc.h>
+void main()
+{
+    TRISB=0x0000;       //output
+    TRISC=0xFFFF;       //Analog Input
+    
+    //Initialize ADC
+    AD1CON1=0x8000;
+
+    //Starts ADC conversion
+    
+    AD1CON1bits.ADON = 1;
+    int ans=0;
+    AD1CON1bits.SAMP = 1;
+    delay_ms(1000);
+    AD1CON1bits.SAMP = 0;
+    while (!AD1CON1bits.DONE);
+        ans = ADC1BUF0;
+
+    //Compare values
+    
+    if(ans>0 && ans<=1024/5)
+        PORTB=0xFF00;
+    else if(ans>1024/5 && ans<=2048/5)
+        PORTB=0x00FF;
+
+}
