@@ -1,0 +1,37 @@
+Name - Mohit Godwani	
+Date - 4 September 2014
+Task - Going through current CoDR 
+________________________________________________________________________________________________________________
+Hardware-
+	I/O Peripherals(BUS interface, ADC, DAC, Digital/Analog ports, UART)
+	Debug Interface (used during development for correcting errors)
+	WatchDog Timer (Resets the system in case of deadlocks)
+	Hardware should be able to bear high temperature ranges, consume low power, reliability, size.
+Architecture-
+	Star, Distributed, Hybrid
+	We are using hybrid since it reduces load on OBC and also makes system (as a whole) less prone to errors.
+	ADCS and TTnC will be using our microcontroller while other sub-systems have their own MCUs.So, Hybrid is
+	most suited.
+Processors(ALU, Control Unit and Memory Unit)-
+	Architectures- Von Neuman(Single Bus) and Harvard(modern, concurrent access to Program memory and Data memory)
+	CISC/RISC-RISC preferred
+Memory-
+	RAM,PROM,FLASH,EEPROM (EEPROM and FLASH are externally interfaced)
+Buses-
+	I2C(2 wired,8-bit,bi-directional)
+	SPI(4 wired)
+	UART(parallel bits to serial)
+	OBDH-ADCS linked through UART
+	Other subsystems are linke to OBDH through SPI/I2C
+MCU chosen-
+	PIC24FJ256GA110(along with 2 SD cards and external EEPROM)
+	
+Software-
+	RTOS is used since it can perform tasks within deadlines, concurrent tasks take place in real time, tasks can be
+	assigned priority.
+	FreeRTOS is used since it is free, has easy to use API, efficient timer and mutex.
+_______________________________________________________________________________________________________________________
+Doubts-
+	Decoupling the memory
+Remaining-
+	Going through FreeRTOS API
