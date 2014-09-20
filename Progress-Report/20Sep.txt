@@ -1,0 +1,9 @@
+1> Completed designing the tasklist in paper
+2> Compelted study of all UART and ADC registers
+3> Completed flowchart illustrating basic transition between various modes and the role of OBDH in it
+4> UART codes have been executed on PIC-16.
+
+
+To be done - 
+1>Detailing of every mode in flowchart so as to be specific about the algorithm design for various levels and modes and their subtasks.
+2>FLASH interfacing codes
