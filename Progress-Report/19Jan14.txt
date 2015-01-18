@@ -1,0 +1,13 @@
+1> Completed SPI codes on PIC24.
+2> Started working on I2C codes.
+3> Compeleted theoretical study of I2C.
+4> Got acqainted with registers used for impelementation of SPI and I2C in PIC24.
+5> Compared SPI and I2C (priory analysis)
+TBD :-
+  Implementing I2C master and slave codes.
+  Implementing EEPROM interfacing codes using I2C.
+  
+Outcomes :-
+  1> Better understanding of buses and their architecture, power consumption which may prove to be useful in cases where there is
+    no constraint on choice of buses.
+  2> Better understanding of libraries of PIC24 and XC.
